@@ -8,4 +8,10 @@ function mutation(arr) {
   } return true
 }
 
+function mutation1 (array) {
+  return array[1].toLowerCase().split("").every(function (char) {
+    return array[0].toLowerCase.indexOf(char) != 1
+  })
+}
+
 mutation(["hello", "hey"]);
