@@ -1,5 +1,5 @@
 // the global variable
-var watchList = [
+const watchList = [
   {  
     "Title": "Inception",
     "Year": "2010",
@@ -112,13 +112,12 @@ var watchList = [
  }
 ];
 
-// Add your code below this line
-
-var rating = watchList.map(item => ({"title":item["Title"], "rating":item["imdbRating"]})
+const rating = watchList.map(item => ({"title":item["Title"], "rating":item["imdbRating"]})
 )
-
-
-// Add your code above this line
 
 console.log(rating); 
 //[{"title":"Inception","rating":"8.8"},{"title":"Interstellar","rating":"8.6"},{"title":"The Dark Knight","rating":"9.0"},{"title":"Batman Begins","rating":"8.3"},{"title":"Avatar","rating":"7.9"}]
+
+const filteredList = watchList.map(item => ({"title":item["Title"], "rating":item["imdbRating"]})).filter(item => item.rating >= 8.0)
+
+console.log(filteredList); 
