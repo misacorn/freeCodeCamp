@@ -2,9 +2,9 @@ function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
   // Only change code below this line
-  let sourceKey = Object.keys(source)
-  arr =  collection.filter(function (obj) {
-    return srcKeys.every(function (key) {
+  let srcKeys = Object.keys(source)
+  arr =  collection.filter(obj => {
+    return srcKeys.every(key => {
       return obj.hasOwnProperty(key) && obj[key] === source[key];
     });
   });

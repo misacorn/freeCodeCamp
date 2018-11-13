@@ -9,3 +9,10 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+
+function destroyer(arr, ...arg) {
+  return arr.filter(x => !arg.includes(x))
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
